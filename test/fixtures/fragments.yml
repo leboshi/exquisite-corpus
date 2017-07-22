@@ -1,7 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  body: MyText
+  id: 1
+  body: This first snippet has only one sentence.
 
 two:
-  body: MyText
+  id: 2
+  body: This is the body of the second fragment.  It has two sentences.
+
+three:
+  id: 3
+  body: The third snippet has three sentences.  This is the second.  And here's the third.
+
+four:
+  id: 4
+  body: '"This entry has two quotations."  "This is the second."'

@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class FragmentsControllerTest < ActionDispatch::IntegrationTest
+  fixtures :fragments
+
   setup do
     @fragment = fragments(:one)
   end
