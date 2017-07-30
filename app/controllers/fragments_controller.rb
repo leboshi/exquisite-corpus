@@ -1,4 +1,7 @@
 class FragmentsController < ApplicationController
+  include CurrentStory
+
+  before_action :set_story, only: [:create]
   before_action :set_fragment, only: [:show, :edit, :update, :destroy]
 
   # GET /fragments
@@ -24,7 +27,7 @@ class FragmentsController < ApplicationController
   # POST /fragments
   # POST /fragments.json
   def create
-    @fragment = Fragment.new(fragment_params)
+    @fragment = @story.fragments.build(fragment_params)
 
     respond_to do |format|
       if @fragment.save
