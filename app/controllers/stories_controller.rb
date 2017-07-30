@@ -1,5 +1,8 @@
 class StoriesController < ApplicationController
+  include AuthorizeAdmin
+
   before_action :set_story, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_admin
 
   # GET /stories
   # GET /stories.json

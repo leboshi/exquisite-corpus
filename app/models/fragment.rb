@@ -1,6 +1,6 @@
 class Fragment < ApplicationRecord
   belongs_to :story
-  has_one :user, as: :author
+  belongs_to :user
 
   def previous_line
     if Fragment.any?

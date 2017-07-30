@@ -7,7 +7,7 @@ class FragmentsController < ApplicationController
   # GET /fragments
   # GET /fragments.json
   def index
-    @fragments = Fragment.all
+    @fragments = Fragment.order(:id)
   end
 
   # GET /fragments/1
@@ -28,6 +28,7 @@ class FragmentsController < ApplicationController
   # POST /fragments.json
   def create
     @fragment = @story.fragments.build(fragment_params)
+    @fragment.user = @user
 
     respond_to do |format|
       if @fragment.save

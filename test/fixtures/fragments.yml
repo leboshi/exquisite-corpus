@@ -3,15 +3,23 @@
 one:
   id: 1
   body: This first snippet has only one sentence.
+  user: one
+  story: one
 
 two:
   id: 2
   body: This is the body of the second fragment.  It has two sentences.
+  user: two
+  story: one
 
 three:
   id: 3
   body: The third snippet has three sentences.  This is the second.  And here's the third.
+  user: one
+  story: one
 
 four:
   id: 4
   body: '"This entry has two quotations."  "This is the second."'
+  user: two
+  story: one

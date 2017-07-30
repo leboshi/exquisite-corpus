@@ -4,6 +4,7 @@ class FragmentsControllerTest < ActionDispatch::IntegrationTest
   fixtures :fragments
 
   setup do
+    login_as users(:one)
     @fragment = fragments(:one)
   end
 

@@ -2,7 +2,15 @@ require 'test_helper'
 
 class StoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
+    puts 'running setup'
+    login_as users(:admin)
     @story = stories(:one)
+  end
+
+  test 'should redirect back if not logged in as admin' do
+    login_as users(:one)
+    get users_url
+    assert_response :redirect
   end
 
   test "should get index" do
